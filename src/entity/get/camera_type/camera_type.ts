@@ -1,8 +1,8 @@
-import { Entity, Column, PrimaryColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class CameraType {
-  @PrimaryColumn()
+  @PrimaryGeneratedColumn()
   camera_id: number;
   @Column()
   camera_english: string;
