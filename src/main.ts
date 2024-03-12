@@ -7,6 +7,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   // 在網址前加上後綴
   app.setGlobalPrefix("api");
+  //阻止CORS跨網域
+  app.enableCors();
   setupSwagger(app);
   await app.listen(3000);
 }
