@@ -5,11 +5,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CameraType } from './entity/get/camera_type/camera_type';
-import { LastestNewsEntity} from "./entity/post/lastest_news/lastest_news";
+import { LastestNewsEntity } from './entity/post/lastest_news/lastest_news';
 
 import { CameraModule } from './features/camera/camera.module';
 import { LastestNewsModule } from './features/lastest_news/lastest_news.module';
-
 
 @Module({
   imports: [
@@ -24,7 +23,7 @@ import { LastestNewsModule } from './features/lastest_news/lastest_news.module';
         port: +configService.get('USER_PORT'),
         username: configService.get('USER_NAME'),
         password: configService.get('USER_PASSWORD'),
-        entities: [CameraType,LastestNewsEntity],
+        entities: [CameraType, LastestNewsEntity],
         synchronize: true,
       }),
     }),
@@ -34,5 +33,4 @@ import { LastestNewsModule } from './features/lastest_news/lastest_news.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {
-}
+export class AppModule {}

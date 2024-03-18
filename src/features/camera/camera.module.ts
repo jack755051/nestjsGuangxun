@@ -4,12 +4,10 @@ import { CameraController } from './camera.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CameraType } from '../../entity/get/camera_type/camera_type';
 
-
 @Module({
   imports: [TypeOrmModule.forFeature([CameraType])],
   providers: [CameraService],
   controllers: [CameraController],
   exports: [CameraService],
 })
-export class CameraModule {
-}
+export class CameraModule {}
