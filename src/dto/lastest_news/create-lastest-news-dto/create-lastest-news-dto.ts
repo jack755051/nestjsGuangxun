@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { newsType } from '../common/interface/lastest_news.interface';
+import { newsType } from '../../../common/interface/lastest_news.interface';
 
 export class CreateLastestNewsDto {
   @ApiProperty()
