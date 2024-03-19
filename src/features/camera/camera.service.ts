@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CameraType } from '../../entity/get/camera_type/camera_type';
+import { CameraType } from '../../entity/camera_type/camera_type';
 
 @Injectable()
 export class CameraService {

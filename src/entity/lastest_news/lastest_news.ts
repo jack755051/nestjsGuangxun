@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
-import { newsType } from '../../../common/interface/lastest_news.interface';
+import { newsType } from '../../common/interface/lastest_news.interface';
 
 @Entity()
 export class LastestNewsEntity {
@@ -22,7 +22,7 @@ export class LastestNewsEntity {
   @Column('mediumtext')
   news_content: string;
   //最新消息本地圖片
-  @Column({ type: 'blob', nullable: true })
+  @Column({ type: 'mediumblob', nullable: true })
   news_image: Buffer;
   //最新消息雲端網址
   @Column({ nullable: true })
