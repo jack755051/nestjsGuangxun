@@ -2,9 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { PostImageEntity } from '../../../entity/common/post_image/post_image';
 import { Repository } from 'typeorm';
-import { PostImage } from '../../../dto/common/post_image/post_image';
-import sharp from 'sharp';
+import { PostImageDto } from '../../../dto/common/post_image/post_image';
+import * as sharp from 'sharp';
 import { v4 as uuidv4 } from 'uuid';
+import {PostImageITF} from "../../../common/interface/post_image/post_image.interface";
 
 @Injectable()
 export class PostImageService {
@@ -13,7 +14,7 @@ export class PostImageService {
     private readonly postImageRepository: Repository<PostImageEntity>,
   ) {}
 
-  public async postImage(req: PostImage): Promise<PostImageEntity> {
+  public async postImage(req: PostImageITF): Promise<PostImageEntity> {
     const uuid: string = uuidv4();
 
     const compressedImage = await sharp(req.image_file)
