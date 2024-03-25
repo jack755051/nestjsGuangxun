@@ -12,6 +12,7 @@ import {LastestNewsModule} from './features/lastest_news/lastest_news.module';
 import {TestEntity} from './entity/post/test/test';
 import {PostImageModule} from './features/common/post_image/post_image.module';
 import {PostImageEntity} from "./entity/common/post_image/post_image";
+import { DownloadProductPdfModule } from './features/event/download-product-pdf/download-product-pdf.module';
 
 @Module({
     imports: [
@@ -33,6 +34,7 @@ import {PostImageEntity} from "./entity/common/post_image/post_image";
         CameraModule,
         LastestNewsModule,
         PostImageModule,
+        DownloadProductPdfModule,
     ],
     controllers: [AppController],
     providers: [AppService],
