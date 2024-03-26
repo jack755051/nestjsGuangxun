@@ -1,7 +1,7 @@
-import {Column, Entity, IsNull} from "typeorm";
+import { Column, Entity, IsNull } from 'typeorm';
 
 @Entity()
 export class GetLastestNewsEntity {
-    @Column()
-    news_type:string
+  @Column()
+  news_type: string;
 }
